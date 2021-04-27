@@ -40,7 +40,7 @@ public class BaseClass {
 	
 	public static void login(String userName, String password) {		
 		driver.findElement(By.xpath(uname)).sendKeys(userName);
-		driver.findElement(By.xpath(pwd)).sendKeys(pwd);
+		driver.findElement(By.xpath(pwd)).sendKeys(password);
 		driver.findElement(By.xpath(loginbtn)).click();
 		System.out.println("The title is : " + driver.getTitle());
 	}
