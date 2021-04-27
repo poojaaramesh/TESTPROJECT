@@ -46,7 +46,10 @@ public class BaseClass {
 	}
 	
 	 public static void selectNavigationLink(String mainMenu, String subMenu) {
-		driver.findElement(By.xpath("//div[@class='slds-no-print oneAppNavContainer']//span[normalize-space()='\"+mainMenu+\"']")).click();
+		driver.findElement(By.xpath("//div[@class='slds-no-print oneAppNavContainer']//span[normalize-space()='\"+mainMenu+\"']"));
+		 
+	        driver.findElement(By.xpath("//div[@class='slds-no-print oneAppNavContainer']//span[normalize-space()='\"+mainMenu+\"']//ancestor::one-app-nav-bar-item-root//lightning-primitive-icon")).click();		
+
 		driver.findElement(By.xpath("//span[contains(text(),'\"+subMenu+\"')]"));
 		} 
 	
